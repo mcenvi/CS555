@@ -11,4 +11,3 @@ def load_data():
     y_train = np.load(os.path.join('./data/raw', 'train_label.npy'))
     y_test = np.load(os.path.join('./data/raw', 'test_label.npy'))
     return X_train, X_test, y_train, y_test
-
