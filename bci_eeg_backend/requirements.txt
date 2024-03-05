@@ -1,0 +1,8 @@
+# python 3.11.5
+torch
+fastapi
+numpy
+uvicorn
+pytest
+pytest-asyncio
+httpx
