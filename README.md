@@ -2,12 +2,13 @@
 
 Team 3	Agile Avengers	Option 3
 
-| Krovvidi, Anurag     |
+| Team 3               |
 | -------------------- |
 | Cen, Mengze          |
 | Kunam, Kireeti       |
 | Tang, Yunfei         |
 | Wusirika, Sai Kruthi |
+| Krovvidi, Anurag     |
 
 1. install the dependencies
 
