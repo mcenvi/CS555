@@ -54,4 +54,4 @@ http-server
 
 You can click the upload image button on the web page, or drag the image to the web page area, and then the model will automatically output desired results.
 
-![result](\images\result.png)
+![output](https://github.com/mcenvi/CS555/blob/main/web_application/images/result.png)
