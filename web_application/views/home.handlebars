@@ -1,12 +1,33 @@
-{{!-- <link rel="stylesheet" href="/public/css/homeStyles.css"> --}}
-<h1 class="home-h1">Option 3: Feature extraction + Machine Learning Explorer</h1>
+{{!-- <link rel="stylesheet" href="../css/style.css"> --}}
+{{!-- <h1 class="home-h1">Option 3: Feature extraction + Machine Learning Explorer</h1>
     <p class="home-paragraph">Utlize existing data and explore
 various feature extraction methods and standard ML classification algorithms,
 incorporating them into a simple web application. Feature extraction methods can
 be discussed.
-    </p>
+    </p> --}}
 
-<a href="/logout">Sign out</a>
-    {{!-- <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
-    crossorigin="anonymous"></script>
-    <script src="/public/js/home.js"></script> --}}
+  <a href="some_linked_website"><img src="../images/bci.png" height="50px"></a>
+  <h1 class='title'>Using TensorFlow.js</h1>
+  <h1 class='title'>let multi-class imagined speech classification be run on your web browser</h1>
+  <h5 class='title' id='tips'> The five classes are 'Hello', 'Help me', 'Stop', 'Thank you' and 'Yes'.</h3>
+  <div id="container">
+    <img src="../images/intro.png" height="400px" id="image" class="center">
+    <div id="text-container">
+      <p id="instruction" class="green-color">
+      <button id="uploader-btn" onClick="clickUploader()"> Upload Brain Signal Data </button>
+      <p class="green-color "> or you can just drag it here</p>
+    
+      <p id="warning" class="result-color"></p>
+      <p class="result-color">
+          The classification result and corresponding possibility are:
+      </p>
+      <input name="imgFile" type="file" id="fileUploader" accept="image/*" onChange="handleFiles()">
+    </div>
+    <canvas id="canvas"></canvas>
+  </div>
+  <a href="/logout">Sign out</a>
+  <script src="../js/detection.js"></script>
+  <script src="../js/index_eeg.js"></script>
+
+
+{{!-- <script src="/public/js/home.js"></script> --}}

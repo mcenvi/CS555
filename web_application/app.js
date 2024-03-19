@@ -6,7 +6,10 @@ import {fileURLToPath} from 'url';
 import {dirname} from 'path';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
-const staticDir = express.static(__dirname + '/public');
+const staticDirCSS = express.static(__dirname + '/css');
+const staticDirIMG = express.static(__dirname + '/images');
+const staticDirJS = express.static(__dirname + '/js');
+const staticDirTFJS = express.static(__dirname + '/tfjs-models');
 import session from 'express-session';
 
 app.use(session({
@@ -70,7 +73,11 @@ app.use('/logout', (req, res, next) => {
 });
 
 app.use(express.json());
-app.use('/public', staticDir);
+// app.use('/public', staticDir);
+app.use('/css', staticDirCSS);
+app.use('/images', staticDirIMG);
+app.use('/js', staticDirJS);
+app.use('/tfjs-models', staticDirTFJS);
 app.use(express.urlencoded({extended: true}));
 
 
