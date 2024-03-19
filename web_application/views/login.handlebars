@@ -1,0 +1,23 @@
+{{!--
+
+login form handlebar template
+
+--}}
+ <h1 class="signup-h1">Please log in</h1>
+ <p class="signup-link"><a href="/register">Click here to register!</a></p>
+ <main>
+    <form action="/login" method="POST" class="login-form" id="login-form">
+        <label for="emailAddressInput" class="emailAddress-login-label">Email Address</label>
+        <input type="email" id="emailAddressInput" name="emailAddressInput" class="login-email">
+    
+        <label for="passwordInput" class="password-login-label">Password</label>
+        <input type="password" id="passwordInput" name="passwordInput" class="login-password">
+
+        <input type="submit" value="Submit" class="login-submit">
+    </form>
+ </main>
+{{#if error}}
+    <p>{{error}}</p>
+{{/if}}
+
+{{!-- <script src='/public/js/client_side_validation.js'></script> --}}
