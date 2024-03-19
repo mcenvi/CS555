@@ -1,0 +1,38 @@
+ <!--
+Copyright (c) 2018 ml5
+
+This software is released under the MIT License.
+https://opensource.org/licenses/MIT
+-->
+
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <script src="js/tfjs.min.js"></script>
+</head>
+
+<body onresize="windowResized()">
+  <a href="some_linked_website"><img src=images/bci.png height="50px"></a>
+  <h1 class='title'>Using TensorFlow.js</h1>
+  <h1 class='title'>let multi-class imagined speech classification be run on your web browser</h1>
+  <h5 class='title' id='tips'> The five classes are 'Hello', 'Help me', 'Stop', 'Thank you' and 'Yes'.</h3>
+  <div id="container">
+    <img src="images/intro.png" height="400px" id="image" class="center">
+    <div id="text-container">
+      <p id="instruction" class="green-color">
+      <button id="uploader-btn" onClick="clickUploader()"> Upload Brain Signal Data </button>
+      <p class="green-color "> or you can just drag it here</p>
+    
+      <p id="warning" class="result-color"></p>
+      <p class="result-color">
+          The classification result and corresponding possibility are:
+      </p>
+      <input name="imgFile" type="file" id="fileUploader" accept="image/*" onChange="handleFiles()">
+    </div>
+    <canvas id="canvas"></canvas>
+  </div>
+  <script src="js/detection.js"></script>
+  <script src="js/index_eeg.js"></script>
+</body>
+</html>
