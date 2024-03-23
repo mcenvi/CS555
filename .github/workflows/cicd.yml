@@ -7,7 +7,7 @@ on:
     branches: [ main ]
 
 jobs:
-  build:
+  build-frontend:
     runs-on: ubuntu-latest
 
     steps:
@@ -23,10 +23,34 @@ jobs:
         registry: ghcr.io
         username: ${{ github.repository_owner }}
         password: ${{ secrets.GITHUB_TOKEN }}
-        
+
     - name: Build and push Docker image
       uses: docker/build-push-action@v2
       with:
-        context: .
+        context: ./web_application  # Path to the directory containing the Dockerfile
         push: ${{ github.event_name == 'push' }}
-        tags: ghcr.io/mcenvi/cs555:latest  # Changed "CS555" to "cs555"
+        tags: ghcr.io/${{ github.repository_owner }}/web_application:latest
+
+  build-backend:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@v1
+
+    - name: Login to GitHub Packages
+      uses: docker/login-action@v1
+      with:
+        registry: ghcr.io
+        username: ${{ github.repository_owner }}
+        password: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Build and push Docker image
+      uses: docker/build-push-action@v2
+      with:
+        context: ./bci_eeg_backend  # Path to the directory containing the Dockerfile
+        push: ${{ github.event_name == 'push' }}
+        tags: ghcr.io/${{ github.repository_owner }}/bci_eeg_backend:latest
